@@ -91,7 +91,7 @@ ImGuiScope::TimeScope::~TimeScope()
 
 	ImGuiScope::putResult(timerName_, result);
 
-	if (consoleOutput_) std::cout << std::format("Timer {} timed out with {} microseconds.\n", timerName_, result.elapsed);
+	if (consoleOutput_) std::cout << "Timer " << timerName_ << "timed out with " << result.elapsed.count() << "microseconds.\n";
 }
 
 	
